@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bernz322/forhire-helper"
+    "url": "git+https://github.com/Bernz322/forhire-helper.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
