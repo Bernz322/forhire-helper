@@ -1,7 +1,7 @@
 import mongoose, { ObjectId } from 'mongoose';
 import { IOffer } from './order.interface';
-import { ISellerGig } from './gig.interface';
-import { ISellerDocument } from './seller.interface';
+import { IContractorGig } from './gig.interface';
+import { IContractorDocument } from './contractor.interface';
 
 export interface IConversationDocument extends Document {
   _id: mongoose.Types.ObjectId | string;
@@ -20,8 +20,8 @@ export interface IMessageDocument {
   fileSize?: string;
   fileName?: string;
   gigId?: string;
-  sellerId?: string;
-  buyerId?: string;
+  contractorId?: string;
+  customerId?: string;
   senderUsername?: string;
   senderPicture?: string;
   receiverUsername?: string;
@@ -37,8 +37,8 @@ export interface IMessageDetails {
   sender?: string;
   offerLink?: string;
   amount?: string;
-  buyerUsername?: string;
-  sellerUsername?: string;
+  customerUsername?: string;
+  contractorUsername?: string;
   title?: string;
   description?: string;
   deliveryDays?: string;
@@ -46,20 +46,20 @@ export interface IMessageDetails {
 }
 
 export interface IChatBoxProps {
-  seller: IChatSellerProps;
-  buyer: IChatBuyerProps
+  contractor: IChatContractorProps;
+  customer: IChatCustomerProps
   gigId: string;
   onClose: () => void;
 }
 
-export interface IChatSellerProps {
+export interface IChatContractorProps {
   _id: string;
   username: string;
   profilePicture: string;
   responseTime: number;
 }
 
-export interface IChatBuyerProps {
+export interface IChatCustomerProps {
   _id: string;
   username: string;
   profilePicture: string;
@@ -67,6 +67,6 @@ export interface IChatBuyerProps {
 
 export interface IChatMessageProps {
   message: IMessageDocument;
-  seller?: ISellerDocument;
-  gig?: ISellerGig;
+  contractor?: IContractorDocument;
+  gig?: IContractorGig;
 }

@@ -1,17 +1,12 @@
 import { ObjectId } from "mongoose";
 import { IRatingCategories, IReviewDocument } from "./review.interface";
-import { ISellerDocument } from "./seller.interface";
+import { IContractorDocument } from "./contractor.interface";
 
-export type GigType =
-  | string
-  | string[]
-  | number
-  | unknown
-  | undefined;
+export type GigType = string | string[] | number | unknown | undefined;
 
 export interface ICreateGig extends Record<string, GigType> {
   // [key: string]: string | string[] | number | undefined;
-  sellerId?: string;
+  contractorId?: string;
   profilePicture?: string;
   title: string;
   categories: string;
@@ -25,12 +20,12 @@ export interface ICreateGig extends Record<string, GigType> {
   basicDescription: string;
 }
 
-export interface ISellerGig {
+export interface IContractorGig {
   _id?: string | ObjectId;
   // this "id" property is used because elasticsearch does not accept a key with an underscore "_id"
   // elasticsearch has _id as a reserved field name
   id?: string | ObjectId;
-  sellerId?: string | ObjectId;
+  contractorId?: string | ObjectId;
   title: string;
   username?: string;
   profilePicture?: string;
@@ -58,19 +53,19 @@ export interface ISellerGig {
 }
 
 export interface IGigContext {
-  gig: ISellerGig;
-  seller: ISellerDocument;
+  gig: IContractorGig;
+  contractor: IContractorDocument;
   isSuccess?: boolean;
   isLoading?: boolean;
 }
 
 export interface IGigsProps {
   type?: string;
-  gig?: ISellerGig;
+  gig?: IContractorGig;
 }
 
 export interface IGigCardItems {
-  gig: ISellerGig;
+  gig: IContractorGig;
   linkTarget: boolean;
   showEditIcon: boolean;
 }
@@ -92,7 +87,7 @@ export interface IGigInfo {
 }
 
 export interface IGigTopProps {
-  gigs: ISellerGig[];
+  gigs: IContractorGig[];
   title?: string;
   subTitle?: string;
   category?: string;

@@ -39,7 +39,7 @@ export interface IAuthDocument {
   hashPassword(password: string): Promise<string>;
 }
 
-export interface IAuthBuyerMessageDetails {
+export interface IAuthCustomerMessageDetails {
   username?: string;
   profilePicture?: string;
   email?: string;

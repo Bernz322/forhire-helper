@@ -2,7 +2,7 @@ export {
   IAuthPayload,
   IAuth,
   IAuthDocument,
-  IAuthBuyerMessageDetails,
+  IAuthCustomerMessageDetails,
   IEmailMessageDetails,
   ISignUpPayload,
   ISignInPayload,
@@ -15,15 +15,18 @@ export {
   IAuthUser,
 } from "./interfaces/auth.interface";
 
-export { IBuyerDocument, IReduxBuyer } from "./interfaces/buyer.interface";
+export {
+  ICustomerDocument,
+  IReduxCustomer,
+} from "./interfaces/customer.interface";
 
 export {
   IConversationDocument,
   IMessageDocument,
   IMessageDetails,
   IChatBoxProps,
-  IChatSellerProps,
-  IChatBuyerProps,
+  IChatContractorProps,
+  IChatCustomerProps,
   IChatMessageProps,
 } from "./interfaces/chat.interface";
 
@@ -32,7 +35,7 @@ export { IEmailLocals } from "./interfaces/email.interface";
 export {
   GigType,
   ICreateGig,
-  ISellerGig,
+  IContractorGig,
   IGigContext,
   IGigsProps,
   IGigCardItems,
@@ -71,13 +74,13 @@ export {
 } from "./interfaces/search.interface";
 
 export {
-  SellerType,
+  ContractorType,
   ILanguage,
   IExperience,
   IEducation,
   ICertificate,
-  ISellerDocument,
-} from "./interfaces/seller.interface";
+  IContractorDocument,
+} from "./interfaces/contractor.interface";
 
 export {
   cloudinaryFileUpload,
@@ -99,6 +102,9 @@ export {
   UNPROCESSABLE_CONTENT,
   TOO_MANY_REQUESTS,
   INTERNAL_SERVER_ERROR,
+  REQUEST_TOO_LONG,
+  SERVICE_UNAVAILABLE,
 } from "./constants/http.constants";
 export { errorHandler } from "./errorHandler";
 export { appAssert } from "./utils/appAssert.utils";
+export { ErrnoException } from "./utils/AppError.utils";

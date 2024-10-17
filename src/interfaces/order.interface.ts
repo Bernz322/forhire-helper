@@ -34,8 +34,8 @@ export interface IOrderEvents {
   orderStarted: string;
   deliveryDateUpdate?: string;
   orderDelivered?: string;
-  buyerReview?: string;
-  sellerReview?: string;
+  customerReview?: string;
+  contractorReview?: string;
 }
 
 export interface IOrderReview {
@@ -45,8 +45,8 @@ export interface IOrderReview {
 }
 
 export interface IOrderMessage {
-  sellerId?: string;
-  buyerId?: string;
+  contractorId?: string;
+  customerId?: string;
   ongoingJobs?: number;
   completedJobs?: number;
   totalEarnings?: number;
@@ -59,8 +59,8 @@ export interface IOrderMessage {
   sender?: string;
   offerLink?: string;
   amount?: string;
-  buyerUsername?: string;
-  sellerUsername?: string;
+  customerUsername?: string;
+  contractorUsername?: string;
   title?: string;
   description?: string;
   deliveryDays?: string;
@@ -82,18 +82,18 @@ export interface IOrderMessage {
 export interface IOrderDocument {
   offer: IOffer;
   gigId: string;
-  sellerId: string;
-  sellerUsername: string;
-  sellerImage: string;
-  sellerEmail: string;
+  contractorId: string;
+  contractorUsername: string;
+  contractorImage: string;
+  contractorEmail: string;
   gigCoverImage: string;
   gigMainTitle: string;
   gigBasicTitle: string;
   gigBasicDescription: string;
-  buyerId: string;
-  buyerUsername: string;
-  buyerEmail: string;
-  buyerImage: string;
+  customerId: string;
+  customerUsername: string;
+  customerEmail: string;
+  customerImage: string;
   status: string;
   orderId: string;
   invoiceId: string;
@@ -109,8 +109,8 @@ export interface IOrderDocument {
   deliveredWork?: IDeliveredWork[];
   dateOrdered?: string;
   events: IOrderEvents;
-  buyerReview?: IOrderReview;
-  sellerReview?: IOrderReview;
+  customerReview?: IOrderReview;
+  contractorReview?: IOrderReview;
   paymentIntent?: string;
 }
 

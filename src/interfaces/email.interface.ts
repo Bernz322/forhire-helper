@@ -4,8 +4,8 @@ export interface IEmailLocals {
   appIcon: string;
   offerLink?: string;
   amount?: string;
-  buyerUsername?: string;
-  sellerUsername?: string;
+  customerUsername?: string;
+  contractorUsername?: string;
   title?: string;
   description?: string;
   deliveryDays?: string;
