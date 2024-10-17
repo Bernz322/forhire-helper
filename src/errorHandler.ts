@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { INTERNAL_SERVER_ERROR } from "./constants/http.constants";
-import AppError from "./utils/AppError.utils";
+import { AppError } from "./utils/AppError.utils";
 
 // Handles AppError which was extended from built-in Error class
 const handleAppError = (res: Response, error: AppError) => {
