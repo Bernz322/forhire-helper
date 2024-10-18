@@ -108,3 +108,5 @@ export {
 export { errorHandler } from "./errorHandler";
 export { appAssert } from "./utils/appAssert.utils";
 export { ErrnoException } from "./utils/AppError.utils";
+
+export { verifyGatewayRequest } from "./gatewayMiddleware";
