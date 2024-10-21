@@ -110,3 +110,5 @@ export { appAssert } from "./utils/appAssert.utils";
 export { ErrnoException } from "./utils/AppError.utils";
 
 export { verifyGatewayRequest } from "./gatewayMiddleware";
+
+export { winstonLogger } from "./logger";
